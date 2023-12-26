@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.LeaderboardController">
+   <children>
+      <Label layoutX="137.0" layoutY="14.0" text="Leaderboard">
+         <font>
+            <Font name="Arial Black" size="48.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tv" layoutX="13.0" layoutY="85.0" prefHeight="168.0" prefWidth="579.0">
+        <columns>
+          <TableColumn fx:id="posTc" prefWidth="180.800048828125" text="Position" />
+          <TableColumn fx:id="nameTc" prefWidth="238.39996337890625" text="Nickname" />
+            <TableColumn fx:id="scoreTc" prefWidth="171.99993896484375" text="Score" />
+        </columns>
+      </TableView>
+      <HBox layoutX="19.0" layoutY="474.0" prefHeight="114.0" prefWidth="569.0">
+         <children>
+            <Button fx:id="newGameButton" mnemonicParsing="false" onAction="#startNewGame" prefHeight="75.0" prefWidth="101.0" text="Play Again">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteScoreButton" mnemonicParsing="false" onAction="#deleteCurrentScore" prefHeight="74.0" prefWidth="161.0" text="Delete">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exitGame" prefHeight="74.0" prefWidth="306.0" style="-fx-background-color: red; -fx-text-fill: #ffff; -fx-background-radius: 20;" text="Exit Game">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Label fx:id="msgLb" layoutX="69.0" layoutY="310.0" text="Your Position is ###">
+         <font>
+            <Font name="Arial Black" size="43.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
